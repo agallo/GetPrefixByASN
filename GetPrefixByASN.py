@@ -27,6 +27,8 @@ a. 0 and 65535 are reserved (error)
 2-byte reserved ASNs for documentation are between 64496 and 64511 (generate warning)
 need to enumerate 4-byte ASNs
 maybe do a ASN name lookup via TeamCymru?
+one possibility is via whois:
+ whois as11039 | egrep "(OrgName|OrgId)"
 '''
 ASN = 2906
 
