@@ -39,7 +39,7 @@ def ASNsanity(ASN):
             ASNnotes="Private ASN range"
 #        if ASN in ianaunalloc4byte:
 #            ASNnotes="Unallocated range"
-        return {'ASNtype':ASNtype, 'ASNnotes':ASNnotes}
+        return {'Atype':ASNtype, 'Anotes':ASNnotes}
     ASNtype="Two byte ASN"
     if ASN in ianareserved2byte:
         ASNnotes="IANA reservered"
@@ -47,8 +47,9 @@ def ASNsanity(ASN):
         ASNnotes="Private ASN range"
     elif ASN in ianadoc2byte:
         ASNnotes="Reserved for documentation"
-    return ASNtype, ASNnotes
+    return {'Atype':ASNtype, 'Anotes':ASNnotes}
 
 
-ASN = 42
-ASNsanity(ASN)
+ASN = 6553222
+print ASNsanity(ASN)
+
