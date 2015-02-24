@@ -28,9 +28,8 @@ ianareserved4byte = range(65552, 131071)
 
 
 def ASNsanity(ASN):
-    return
     if not isinstance(ASN, int):
-        raise Exception("ASN is not an integer")
+        print "ASN is not an integer"
     ASNnotes="Normal ASN"
     if ASN > 65535:
         ASNtype="Four byte ASN"
