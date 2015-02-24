@@ -35,10 +35,10 @@ def ASNsanity(ASN):
         ASNtype="Four byte ASN"
         if ASN in ianadoc4byte:
             ASNnotes="Reserved for documentation"
-        if ASN in ianapriv4byte:
+        if 4294967294 < ASN < 4200000000:
             ASNnotes="Private ASN range"
-        if ASN in ianaunalloc4byte:
-            ASNnotes="Unallocated range"
+#        if ASN in ianaunalloc4byte:
+#            ASNnotes="Unallocated range"
         return {'ASNtype':ASNtype, 'ASNnotes':ASNnotes}
     ASNtype="Two byte ASN"
     if ASN in ianareserved2byte:
@@ -51,3 +51,4 @@ def ASNsanity(ASN):
 
 
 ASN = 42
+ASNsanity(ASN)
