@@ -29,6 +29,7 @@ need to enumerate 4-byte ASNs
 maybe do a ASN name lookup via TeamCymru?
 one possibility is via whois:
  whois as11039 | egrep "(OrgName|OrgId)"
+ whois -h whois.cymru.com "AS11039"
 '''
 ASN = 2906
 
